@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#614b38">
+  <title>Lista de presentes — Larissa & Kalisson</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="hero__names"><span>Larissa</span><b>&amp;</b><span>Kalisson</span></div>
+      <p class="hero__date">22 DE AGOSTO DE 2026</p>
+      <div class="heart-divider" aria-hidden="true"><span>♡</span></div>
+      <div class="hero__text">
+        <p>Nossa história começou muito antes deste casamento. E, se você está lendo esta mensagem, é porque faz parte dela.</p>
+        <p>Ao longo dos últimos anos construímos nosso lar e, felizmente, nossa casa já está praticamente completa. Pensando nisso, reunimos algumas sugestões de presentes e também um cofrinho para quem desejar contribuir com o nosso dia.</p>
+        <p>São apenas sugestões, sinta-se completamente à vontade para escolher a forma que preferir. O mais importante para nós será compartilhar esse momento ao seu lado.</p>
+      </div>
+      <div class="heart-divider heart-divider--small" aria-hidden="true"><span>♡</span></div>
+    </header>
+
+    <section class="section">
+      <h1 class="section__title">Sugestões de presentes</h1>
+<div id="gift-grid" class="gift-grid"></div>
+    </section>
+
+    <section class="section section--fund">
+      <h1 class="section__title">Vaquinha</h1>
+      <article class="fund-card">
+        <img src="assets/vaquinha.webp" alt="Vaquinha para contribuir com os preparativos">
+        <p>Vaquinha para contribuir com os preparativos</p>
+        <button id="open-pix" class="pix-button" type="button">Contribua com Pix</button>
+      </article>
+    </section>
+
+    <footer>
+      <div class="heart-divider heart-divider--footer" aria-hidden="true"><span>♡</span></div>
+      <p>Obrigado por fazer parte da nossa história.<br>Com carinho, Larissa e Kalisson.</p>
+    </footer>
+  </main>
+
+  <dialog id="reserve-dialog">
+    <form id="reserve-form">
+      <button class="close" type="button" data-close aria-label="Fechar">×</button>
+      <p class="dialog__eyebrow">Larissa &amp; Kalisson</p>
+      <h2>Reservar presente</h2>
+      <p id="selected-gift" class="dialog__gift"></p>
+      <label>Seu nome<input id="guest-name" autocomplete="name" maxlength="80" required></label>
+      <label>Telefone ou recado <small>(opcional)</small><input id="guest-contact" maxlength="120"></label>
+      <div class="reservation-explanation">
+        <p><strong>Este é apenas um registro de intenção.</strong></p>
+        <p>Ao confirmar esta reserva, você nos informa que pretende nos presentear com este item físico. Não há nenhum pagamento pelo site. A reserva serve apenas para evitar presentes repetidos.</p>
+        <p>O presente poderá ser entregue no dia da nossa celebração ou da forma que preferir.</p>
+      </div>
+      <div class="dialog__actions">
+        <button class="button button--light" type="button" data-close>Cancelar</button>
+        <button id="confirm-reserve" class="button button--dark" type="submit">Confirmar reserva</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="pix-dialog">
+    <div class="pix-modal">
+      <button class="close" type="button" data-close-pix aria-label="Fechar">×</button>
+      <p class="dialog__eyebrow">Larissa &amp; Kalisson</p>
+      <h2>Contribuir pelo Pix</h2>
+      <img class="pix-qr" src="assets/pix.png" alt="QR Code Pix">
+      <button id="copy-pix" class="button button--dark button--full" type="button">Copiar código Pix</button>
+      <p class="dialog__note dialog__note--center">Chave Pix: 416.969.068-06<br>Kálisson Guilherme de Abreu Poier — Inter</p>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
